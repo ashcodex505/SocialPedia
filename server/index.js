@@ -32,8 +32,8 @@ app.use(bodyParser.json({limit: "30mb", extended: true})); //configures it to pa
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true})); //configures body-parser to handle URL-encoded bodies 
 app.use(cors(
     {
-        origin : ["https://social-pedia-1whq.vercel.app"],
-        methods: ["POST", "GET", "PATCH", "PUT"],
+        origin : ["https://social-pedia-two.vercel.app"],
+        methods: ["POST", "GET", "PATCH"],
         credentials: true
     }
 )); //allows or restricts cross-origin HTTP requests
