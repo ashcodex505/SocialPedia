@@ -30,7 +30,13 @@ app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"})); //specifies
 app.use(morgan("common")); //logs HTTP requests in the common format 
 app.use(bodyParser.json({limit: "30mb", extended: true})); //configures it to parse JSON bodies with a size limit of 30mb and extended option 
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true})); //configures body-parser to handle URL-encoded bodies 
-app.use(cors()); //allows or restricts cross-origin HTTP requests
+app.use(cors(
+    {
+        origin : ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST", "GET", "PATCH"],
+        credentials: true
+    }
+)); //allows or restricts cross-origin HTTP requests
 app.use("/assets", express.static(path.join(__dirname, 'public/assets'))); //Serves static files from the speicficed directory under the /assets route
 
 /* FILE STORAGE */
