@@ -12,7 +12,7 @@ const SearchPostsWidget = ({ firstName}) => {
   const getSearchPosts = async () => {
     //only get the users posts 
     const response = await fetch(
-      `http://localhost:3001/search/${firstName}`,
+      `https://social-pedia-api.vercel.app/search/${firstName}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
