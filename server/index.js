@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true})); //configures bo
 app.use(cors(
     {
         origin : ["https://social-pedia-api.vercel.app"],
-        methods: ["POST", "GET", "PATCH"],
+        methods: ["POST", "GET", "PATCH", "PUT"],
         credentials: true
     }
 )); //allows or restricts cross-origin HTTP requests
