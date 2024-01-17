@@ -10,7 +10,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getPosts = async () => {
     //gets entire feed posts
-    const response = await fetch("http://localhost:3001/posts", {
+    const response = await fetch("https://social-pedia-api.vercel.app/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -21,7 +21,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const getUserPosts = async () => {
     //only get the users posts 
     const response = await fetch(
-      `http://localhost:3001/posts/${userId}/posts`,
+      `https://social-pedia-api.vercel.app/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
