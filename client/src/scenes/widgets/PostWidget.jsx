@@ -38,7 +38,7 @@ import {
     const primary = palette.primary.main;
   
     const patchLike = async () => {
-      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+      const response = await fetch(`https://social-pedia-api.vercel.app/posts/${postId}/like`, {
         method: "PATCH",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ import {
 
     const submitComment = async () => {
       if (!newComment) return; // Don't submit empty comments
-      const response = await fetch(`http://localhost:3001/posts/${postId}/comment`, {
+      const response = await fetch(`https://social-pedia-api.vercel.app/posts/${postId}/comment`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
